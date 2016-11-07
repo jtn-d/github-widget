@@ -1,0 +1,26 @@
+{
+  "name": "github-widget",
+  "version": "0.1.0",
+  "description": "Github Widget",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/jtn-d/github-widget.git",
+    "type": "git"
+  },
+  "author": "jtn-d <you@example.com>",
+  "license": "MIT",
+	  "scripts": {
+    "test": "mocha tests/*spec.js",
+    "build": "mkdir -p tmp && npm run inline-source && npm run html-minifier && rm -rf tmp",
+		"inline-source": "inline-source --root src/ src/index.html tmp/widget.html",
+    "html-minifier": "html-minifier --minify-css=true --minify-js=true --collapse-whitespace --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes tmp/widget.html -o dist/widget.html"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "html-minifier": "^3.1.1",
+    "inline-source-cli": "^1.1.1",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0"
+  }
+}
