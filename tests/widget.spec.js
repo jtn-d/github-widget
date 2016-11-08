@@ -1,7 +1,7 @@
 var chai = require('chai')
 var expect = chai.expect
 var sinon = require('sinon')
-var sinonChai = require("sinon-chai");
+var sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 
 var Widget = require('../src/widget.js')

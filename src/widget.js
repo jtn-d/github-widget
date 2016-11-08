@@ -24,8 +24,6 @@
 	Widget.prototype.mount = function (target) {
 		if (typeof target === 'string') target = this.document.querySelector(target)
 		target.appendChild(this.element)
-
-		this.element.innerHTML = 'Widget'
 	}
 
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')

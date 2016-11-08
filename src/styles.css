@@ -2,3 +2,40 @@ html, body {
 	padding: 0;
 	margin: 0;
 }
+
+button {
+	display: inline;
+	position: relative;
+	background: transparent;
+	border: 0;
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 80px;
+	height: 80px;
+}
+
+img:active {
+	margin: 2px;
+	width: 76px;
+	height: 76px;
+}
+
+span {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: auto;
+	min-width: 20px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px;
+	text-align: center;
+	background: black;
+	border-radius: 50%;
+	color: white;
+	font-weight: bold;
+}
