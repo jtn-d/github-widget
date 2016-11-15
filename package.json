@@ -9,10 +9,13 @@
   },
   "author": "jtn-d <you@example.com>",
   "license": "MIT",
-	  "scripts": {
-    "test": "mocha tests/*spec.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:ui",
+    "test:unit": "mocha tests/unit/*spec.js",
+    "test:ui": "wdio wdio.conf.js",
+		"selenium": "selenium-standalone install && selenium-standalone start",
     "build": "mkdir -p tmp && npm run inline-source && npm run html-minifier && rm -rf tmp",
-		"inline-source": "inline-source --root src/ src/index.html tmp/widget.html",
+    "inline-source": "inline-source --root src/ src/index.html tmp/widget.html",
     "html-minifier": "html-minifier --minify-css=true --minify-js=true --collapse-whitespace --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes tmp/widget.html -o dist/widget.html"
   },
   "devDependencies": {
@@ -20,7 +23,11 @@
     "html-minifier": "^3.1.1",
     "inline-source-cli": "^1.1.1",
     "mocha": "^3.1.2",
+    "selenium-standalone": "latest",
     "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "wdio-mocha-framework": "^0.5.3",
+    "wdio-spec-reporter": "^0.0.3",
+    "webdriverio": "^4.4.0"
   }
 }

@@ -4,8 +4,8 @@ var sinon = require('sinon')
 var sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 
-var Widget = require('../src/widget.js')
-var GitHub = require('../src/github.js')
+var Widget = require('../../src/widget.js')
+var GitHub = require('../../src/github.js')
 
 describe('GitHub', function() {
 
